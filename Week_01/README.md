@@ -32,10 +32,10 @@ leetcode刷题方法：
 一维：
 • 基础：数组 array (string), 链表 linked list
 • 高级：栈 stack, 队列 queue, 双端队列 deque, 集合 set, 映射 map (hash or map), etc
-• 二维：
+二维：
 • 基础：树 tree, 图 graph
 • 高级：二叉搜索树 binary search tree (red-black tree, AVL), 堆 heap, 并查集 disjoint set, 字典树 Trie, etc
-• 特殊：
+特殊：
 • 位运算 Bitwise, 布隆过滤器 BloomFilter
 • LRU Cache
 
@@ -49,7 +49,82 @@ leetcode刷题方法：
 • 贪心 Greedy
 • 数学 Math , 几何 Geometry
 
-                        第二节：
+                              第二节：
+时间复杂度：
+方法:函数根据n值不同，总共运行多少次
+
+O(1): Constant Complexity 常数复杂度
+O(log n): Logarithmic Complexity 对数复杂度
+O(n): Linear Complexity 线性时间复杂度
+O(n^2): N square Complexity 平方
+O(n^3): N cubic Complexity 立方
+O(2^n): Exponential Growth 指数
+O(n!): Factorial 阶乘
+• 不考虑系数，只看最高复杂度
+例子：
+O(1) int n = 1000;
+     System.out.println("Hey - your input is: " + n);
+O(1) int n = 1000;
+     System.out.println("Hey - your input is: " + n);
+     System.out.println("Hmm.. I'm doing more stuff with: " + n);
+     System.out.println("And more: " + n);
+O(N) for (int i = 1; i <= n; i++) {
+     System.out.println("Hey - I'm busy looking at: " + i);
+     }
+O(N^2) for (int i = 1; i <= n; i++) {
+          for (int j = 1; j <=n; j++) {
+              System.out.println("Hey - I'm busy looking at: " + i + " and " + j);
+          } 
+       }
+O(log(n)) for (int i = 1; i < n; i = i * 2) {
+               System.out.println("Hey - I'm busy looking at: " + i);
+          }
+O(k^n) int fib(int n) {
+            if (n < 2) return n;
+                return fib(n - 1) + fib(n - 2);
+            }
+       }
+
+主定理：
+二分查找(Binary search):O(log(n))
+二叉树遍历(Binary tree traversal):O(N)
+有序二维矩阵(optimal sorted matrix search)：O(N)
+归并排序(merge sort): O(nlog(n))
+
+空间复杂度：
+• 数组长度
+• 递归深度
+                              第3节：
+数组：
+操作     时间复杂度
+prepend      O(1)
+append       O(1)
+lookup       O(1)
+
+insert       O(n)
+delete       O(n)
+
+链表：
+
+  操作     时间复杂度
+prepend      O(1)
+append       O(1)
+insert       O(1)
+delete       O(1)
+
+lookup       O(n)
+应用：LRU Cache  https://www.jianshu.com/p/b1ab4a170c3c
+
+跳表：
+注意：只能用于**元素有序**的情况。
+跳表（skip list）对标的是平衡树（AVL Tree）和二分查找，是一种 插入/删除/搜索 都是 O(log n) 的数据结构。1989 年出现。
+时间：lookup       O(log(n))
+空间：             O(n)
+应用：Redis
+
+
+
+
 
 
 
