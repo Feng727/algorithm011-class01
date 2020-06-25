@@ -1,13 +1,13 @@
 class Solution {
+    //快慢双指针法
     public void moveZeroes(int[] nums) {
-        int index = 0;
+        int slow_index = 0;
         for (int i=0; i<nums.length; i++) {
             if (nums[i] != 0) {
-                nums[index++] = nums[i];
+                int temp = nums[i];
+                nums[i] = nums[slow_index];
+                nums[slow_index++] = temp;
             }
-        }
-        while(index<nums.length){
-            nums[index++] = 0;
         }
     }
 }
