@@ -1,4 +1,5 @@
 class Solution {
+    // System.arraycopy()方法，类似于官方的暴力法
     public void rotate(int[] nums, int k) {
         int len = nums.length;
         //int[] temp = new int[len-1];
