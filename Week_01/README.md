@@ -1,5 +1,6 @@
 学习笔记
-                        第一节：
+
+**第1节**：
 第一部分：如何高效学习
 
 精通一个领域3步曲：
@@ -49,7 +50,8 @@ leetcode刷题方法：
 • 贪心 Greedy
 • 数学 Math , 几何 Geometry
 
-                              第二节：
+
+**第2节**：
 时间复杂度：
 方法:函数根据n值不同，总共运行多少次
 
@@ -94,7 +96,8 @@ O(k^n) int fib(int n) {
 空间复杂度：
 • 数组长度
 • 递归深度
-                              第3节：
+
+**第3节**：
 数组：
 操作     时间复杂度
 prepend      O(1)
@@ -123,6 +126,22 @@ lookup       O(n)
 应用：Redis
 
 
+**第4节**：
+stack:
+Stack<Integer> stack = new Stack<>();
+
+1. boolean res = stack.empty();    //true if and only if this stack contains no items; false otherwise
+
+2. stack.push(item); // the item to be pushed onto this stack.
+
+3. int res = stack.pop(); //Removes the object at the top of this stack and returns that object as the value of this function.
+                         **Throws**:  EmptyStackException - if this stack is empty.
+4. int res = stack.peek();// Looks at the object at the top of this stack without removing it from the stack. 
+                          **Throws**: EmptyStackException - if this stack is empty.    
+5. int index = stack.search(item)  //the 1-based position from the top of the stack where the object is located;
+                                   //the return value -1 indicates that the object is not on the stack.   
+
+Deque:
 
 
 
